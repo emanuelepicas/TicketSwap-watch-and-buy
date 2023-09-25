@@ -46,7 +46,7 @@ let tickets_already_notified=[];
 let availableTicket= function (url) {
 
   tickets_already_notified.push(url);
-  exec('spd-say "I found a ticket for you" ') //PLAYING SOUNBD
+  exec('I=6; while [ $I -gt 0 ]; do spd-say "I found a ticket for you"; sleep 3; I=$((I - 1)); done') //PLAYING SOUND FOR 6 TIMES, FIRST SIMPLE NOTIFICATION SYSTEM
   exec(`python automaticClick.py ${url}`); //OPENING THE PYTHON SCRIPT TO RUN SELENIUM
   process.exit(0);
 }
